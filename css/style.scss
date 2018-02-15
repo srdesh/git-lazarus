@@ -1,0 +1,1249 @@
+// =================
+// color declaration
+// =================
+$aj-orange: #ffa505;
+$aj-orange-dark: #f39c12;
+$aj-blue: #00bfff;
+$white: #ffffff;
+$ash: #484848;
+$normal-ash: #636e72;
+$light-ash: #f5f5f5;
+$dark-blue: #0984e3;
+
+// ================
+// font declaration
+// ================
+$osans: 'Open sans', arial;
+
+// ===============
+// inheritated css
+// ===============
+%title{
+	font-family: $osans;
+	color: $ash;
+	font-size: 24px;
+}
+
+%sub-title{
+	font-family: $osans;
+	color: $ash;
+	font-size: 18px;
+}
+
+%text{
+	font-family: $osans;
+	color: $ash;
+	font-size: 14px;
+}
+
+%invisible{
+	display: none;
+}
+
+%visible{
+	display: block;
+}
+
+%background{
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+// --------------------------------
+// GLOBAL - CSS STARTS FROM HERE
+// --------------------------------
+// ==========
+// 	whole body
+// ==========
+body{
+	height: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	background-color: $white;
+}
+
+@media screen and (max-width: 768px){
+	body{
+		overflow-x: hidden;
+	}
+}
+
+a{
+	text-decoration: none !important;
+}
+
+.aj-title{
+	@extend %title;
+}
+
+.aj-subtitle{
+	@extend %sub-title;
+}
+
+.aj-text{
+	@extend %text;
+}
+
+.aj-small-text{
+	@extend %text;
+	font-size: 10px;
+}
+
+.strike{
+	text-decoration: line-through;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+.under-over-line{
+	text-decoration: dashed underline overline;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.light{
+	font-weight: lighter;
+}
+
+.thin{
+	font-weight: thin;
+}
+
+.orange{
+	color: $aj-orange;
+}
+
+.blue{
+	color: $aj-blue;
+}
+
+.ash{
+	color: $ash;
+}
+
+.normal-ash{
+	color: $normal-ash;
+}
+
+.white{
+	color: $white;
+}
+
+.back-orange{
+	background-color: $aj-orange;
+}
+
+.back-blue{
+	background-color: $aj-blue;
+}
+
+.back-dark-blue{
+	background-color: $dark-blue;
+}
+
+.back-ash{
+	background-color: $ash;
+}
+
+.back-normal-ash{
+	background-color: $normal-ash;
+}
+
+.back-white{
+	background-color: $white;
+}
+
+.back-light-ash{
+	background-color: $light-ash;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.object-center{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.object-right{
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+}
+
+.hover-shadow:hover{
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.big-space{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.medium-space{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.small-space{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.x-small-space{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.top-big-space{
+	margin-top: 100px;
+}
+
+.bottom-big-space{
+	margin-bottom: 100px;
+}
+
+.top-medium-space{
+	margin-top: 50px;
+}
+
+.bottom-medium-space{
+	margin-bottom: 50px;
+}
+
+.top-small-space{
+	margin-top: 30px;
+}
+
+.bottom-small-space{
+	margin-bottom: 20px;
+}
+
+.top-x-small-space{
+	margin-top: 5px;
+}
+
+.bottom-x-small-space{
+	margin-bottom: 5px;
+}
+
+.invisible{
+	visibility: hidden;
+}
+
+.visible{
+	visibility: visible;
+}
+
+.padding-10{
+	padding: 10px;
+}
+
+.padding-20{
+	padding: 20px;
+}
+
+.no-padding{
+	padding: 0;
+}
+
+.no-margin{
+	margin: 0;
+}
+
+.block-shadow{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.aj-btn-orange{
+	background-color: $aj-orange;
+	color: $white;
+	width: 100px;
+	border: 0;
+	border-radius: 0;
+}
+
+.aj-btn-orange:hover,
+.aj-btn-orange:focus,
+.aj-btn-orange:link{
+	background-color: $aj-orange-dark;
+	color: $white;
+}
+
+// =============
+// navbar-mobile
+// =============
+.mobile-navbar-icons{
+	height: 20px;
+	width: 20px;
+}
+
+@keyframes jump {
+  0%{
+	transform: translateY(0);
+  }
+  20%{
+	transform: translateY(0);
+  }
+  40%{
+	transform: translateY(-10px);
+  }
+  50%{
+	transform: translateY(0);
+  }
+  60%{
+	transform: translateY(-10px);
+  }
+  80%{
+	transform: translateY(0);
+  }
+  100%{
+	transform: translateY(0);
+  }
+}
+
+.jump {
+   -webkit-animation: jump 1.5s ease 0s infinite normal ;
+ 	animation: jump 1.5s ease 0s infinite normal ;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: $white;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:nth-child(3){
+	position: absolute;
+	right: 110px;
+}
+
+.topnav a:last-child,
+.topnav a:last-child:hover,
+.topnav a:last-child:active{
+	background-color: $white;
+	position: absolute;
+	right: 0px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover,
+.topnav a.active {
+    background-color: $light-ash;
+}
+
+// ==============
+// sidebar-mobile
+// ==============
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 10px 0px 20px rgba(0,0,0,0.1);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: $white;
+}
+
+// sidebar hero image section
+.sidebar-hero-image{
+	height: 200px;
+	margin-top: -70px;
+	padding: 0px;
+	background: url("../res/side-hero.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.sidebar-profile{
+		margin-top: -100px;
+
+		.profile-circle{
+			background-image: url("../res/profile-img.jpg");
+			background-position: center;
+			background-size: cover;
+			border-radius: 100%;
+			height: 70px;
+			width: 70px;
+		}
+	}
+}
+
+.sign-in{
+	width: 100%;
+
+	a, a:hover{
+		display: block;
+		padding: 10px;
+		width: 100%;
+		color: $white;
+	}
+}
+
+.sidebar-option{
+	p{
+		margin: -15px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 10px;
+		padding-left: 15px;
+	}
+
+	a, a:active, a:focus, a:hover{
+		width: 100%;
+		display: block;
+		color: $normal-ash;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+
+		i{
+			margin-right: 10px;
+		}
+	}
+}
+
+
+// =========
+// navbar-pc
+// =========
+.top-nav-bar{
+	background-color: $aj-blue;
+	border-radius: 0;
+	border: 0;
+	min-height: 30px;
+	margin-bottom: 0px;
+
+	.navbar-toggle,
+	.navbar-toggle:hover,
+	.navbar-toggle:focus{
+		background-color: transparent;
+		border-color: transparent;
+	}
+}
+
+#top-nav-bar{
+	border-color: transparent;
+	
+	ul{
+		margin: 0 0 0 0;
+
+		li{
+			a{
+				color: $white;
+				padding: 10px;
+				padding-top: 5px;
+			}
+		}
+	}
+}
+
+.bottom-nav-bar{
+	background-color: $white;
+	border-radius: 0;
+	border: 0;
+	z-index: 99;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
+	
+	.bottom-menu-box{
+		margin-top: 25px;
+		margin-bottom: 25px;
+
+		.brand{
+			line-height: normal;
+		}
+
+		#logo-amu{
+			font-family: $osans;
+			font-weight: bold;
+			font-size: 32px;
+			color: $aj-orange;
+		}
+
+		#logo-jamu{
+			font-family: $osans;
+			font-weight: bold;
+			font-size: 32px;
+			color: $aj-blue;
+		}
+
+		.input-group input{
+			border: 1px solid $aj-orange;
+			border-color: $aj-orange;
+			border-radius: 0;
+
+		}
+
+		.input-group-btn button{
+			border: 1px solid $aj-orange;
+			border-color: $aj-orange;
+			background-color: $aj-orange;
+			color: $white;
+			border-radius: 0;
+		}
+
+		//dropdown menu
+		.input-group{
+
+			.dropdown-menu,
+			.col-lg-12{
+				margin: 0px !important;
+				padding: 0px !important;
+				border-radius: 0;
+				height: 300px;
+
+				#menu {
+				  display: block;
+				  position: relative;
+				  z-index: 99;
+				  margin: 0;
+				  height: 280px;
+				  margin-left: -40px;
+				}
+
+				#menu li {
+				  display: block;
+				  width: 200px;
+				}
+				#menu li a {
+				  @extend %text;	
+				  display: block;
+				  float: none;
+				  line-height: 50px;
+				  padding: 0 15px;
+				}
+				#menu li a:hover {
+				  background: $aj-orange;
+				  color: $white;
+				}
+
+				#menu li ul {
+				  display: none;
+				  position: absolute;
+				  left: 200px;
+				  top: 0;
+				  height: 100%;
+				  width: auto;
+				  padding-top: 15px;
+				  padding-right: 30px;
+				  overflow-y: scroll;
+				  background: none;
+				  -webkit-box-shadow: none;
+				  -moz-box-shadow: none;
+				  box-shadow: none;
+				}
+
+				#menu li ul li a { 
+				  color: $ash; 
+				}
+
+				#menu li ul li a:hover { 
+				  text-decoration: underline; 
+				}
+
+				#menu li a:hover, 
+				#menu li a.active { 
+				  background: $aj-orange; 
+				  color: $white; 
+				}
+
+				#menu li ul { 
+				  background: $white; 
+				}
+
+				#menu li ul .thumbnail{
+					padding: 0px;
+					border-radius: 0;
+				 	
+				 	.thumbnail-img{
+						width: 100%;
+					}
+
+					.thumbnail-title{
+						text-align: center;
+					}
+
+					.caption{
+						padding: 0px;
+						padding-top: 9px;
+					}
+				}
+
+			}
+
+		}
+
+	}
+}
+
+// navbar mobile view
+@media screen and (max-width: 768px){
+	.top-nav-bar{
+		background-color: $aj-blue;
+		border-radius: 0;
+		border: 0;
+		height: auto;
+		min-height: 50px;
+	}
+
+	#top-nav-bar{ 
+		ul li a{
+			color: $white;
+			padding: 10px 5px;
+		}
+	}
+}
+
+
+// --------------------------------
+// HOME - CSS STARTS FROM HERE
+// --------------------------------
+// =========
+// main-body
+// =========
+#main-body {
+    transition: margin-left .5s;
+    overflow: hidden;
+    width:100%;
+}
+
+// ========
+// hero-box
+// ========
+
+// coupon
+#gift{
+	height: 389px;
+	width: 200px;
+	margin-top: 120px;
+	background-image: url('../res/dis.jpg');
+	position: fixed;
+	z-index: 999999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	#gift-trigger{
+		height: 50px;
+		width: 50px;
+		margin-left: 200px;
+		cursor: pointer;
+		background-color: $aj-blue;
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		position: fixed;
+		z-index: 9999999;
+
+		i{
+			height: 50px;
+			width: 50px;
+			text-align: center;
+			font-size: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: $white;
+		}
+	}
+}
+
+
+.hero-image{
+	margin-top: 100px;
+	z-index: 0;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+@media screen and (max-width: 768px){
+	.hero-image{
+		margin-top: 60px;
+
+		.rslides{
+			img{
+				width: auto;
+				height: 200px;
+				position: relative;
+				background-size: auto 100%;
+				background-position: center;
+			}
+		}
+	}
+}
+
+// ==================
+// limited time offer
+// ==================
+.countdown{
+	background-color: $aj-orange;
+	border: 0px;
+	border-radius: 0;
+	color: $white;
+
+	.countdown-text{
+		@extend %text;
+		margin: 0px;
+		color: $white;
+	}
+
+	.countdown-value{
+		padding: 10px;
+		color: $aj-orange;
+		background-color: $white;
+	}
+}
+
+.lto-box{
+	border: 1px solid rgba(0,0,0,0.1);
+	
+	.row{
+		.lto-box-left{
+			padding: 15px;
+			padding-left: 30px;
+
+			.aj-subtitle:first-child{
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+
+			.aj-subtitle:nth-child(3){
+				margin-top: -10px;
+				margin-bottom: 20px;
+			}
+
+			.rateYo .jq-ry-normal-group,
+			.rateYo .jq-ry-rated-group{
+				margin-left: -5px;
+			} 
+		}
+
+		.lto-box-right{
+			.lto-img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.countdown{
+		.ct-offer{
+			position: absolute;
+			right: 0px;
+			width: 90px;
+			padding: 10px;
+			color: $aj-orange;
+			background-color: $white;
+			border-radius: 25px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+		}
+		.countdown-value{
+			padding: 0px;
+			font-weight: bold;
+			background-color: transparent;
+			color: $white;
+		}
+	}
+}
+
+
+// ===================
+// popular destination
+// ===================
+.popular-destination{
+	.aj-text{
+		margin-bottom: -10px;
+	}
+
+	// inherited block css
+	%block{
+		.content{
+			position: absolute;
+			padding: 20px;
+
+			.price-tag{
+				background-color: $aj-orange;
+				width: 80px;
+				padding: 10px;
+			}
+		}
+	}
+
+	.block-a{
+		background: url('../res/block-a.jpg');
+		height: 700px;
+		@extend %background;
+		@extend %block;
+		.content{
+			margin-top: -700px;	
+		}
+	}
+
+	.block-b-a{
+		background: url('../res/block-b-a.jpg');
+		height: 400px;
+		@extend %background;
+		@extend %block;
+		.content{
+			margin-top: -400px;
+		}
+	}
+
+	.block-b-b{
+		background: url('../res/block-b-a.jpg');
+		height: 400px;
+		@extend %background;
+		@extend %block;
+		.content{
+			margin-top: -400px;
+		}
+	}
+
+	.block-c{
+		background: url('../res/block-b-a.jpg');
+		height: 400px;
+		@extend %background;
+		@extend %block;
+		.content{
+			margin-top: -400px;
+		}
+	}
+
+	.block-d{
+		background: url('../res/block-a.jpg');
+		height: 700px;
+		@extend %background;
+		@extend %block;
+		.content{
+			margin-top: -700px;	
+		}
+	}
+}
+
+// popular destination mobile view
+@media screen and (max-width: 768px){
+	.popular-destination{
+		
+		.block-a, .block-d{
+			height: 400px;
+			.content{
+				margin-top: -400px;
+			}
+		}
+
+		.block-c{
+			margin-top: 30px;
+		}
+	}
+}
+
+// ====================
+// featured destination
+// ====================
+.featured-destination{
+	.aj-text{
+		margin-bottom: -10px;
+	}
+
+	.slider {
+		width: 95%;
+		button:before{
+			color: $ash;
+		}	
+	    div img{
+	    	width: 250px;
+	    }
+	}
+
+	.featured-package{
+		border-radius: 0;
+		padding: 0;
+		margin: 10px;
+
+		.fp-img{
+			width: 100%;
+		}
+
+		.caption{
+			.aj-text{
+				margin: 0;
+			}
+			.fp-rate .jq-ry-normal-group,
+			.fp-rate .jq-ry-rated-group{
+				margin-left: -5px;
+			} 
+		}	
+	}
+}
+
+// =============
+// amujamu video
+// =============
+.video-js{
+	width: 100%;
+	height: 410px;
+	cursor: pointer;
+}
+
+// amujamu video mobile view
+@media screen and (min-width: 1400px){
+	.video-js{
+		height: 583px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.video-js{
+		height: 117px;
+	}
+}
+
+// ==================
+// best selling tours
+// ==================
+.best-selling-tour{
+	.aj-text{
+		margin-bottom: -10px;
+	}
+
+	.bst-package{
+		border-radius: 0;
+		padding: 0;
+		margin: 10px;
+
+		.caption{
+			.aj-text{
+				margin: 0;
+			}
+			.fp-rate .jq-ry-normal-group,
+			.fp-rate .jq-ry-rated-group{
+				margin-left: -5px;
+			} 
+		}
+	}	
+}
+
+// ============
+// new category
+// ============
+.new-category{
+	.aj-text{
+		margin-bottom: -10px;
+	}
+
+	.slider {
+		width: 95%;
+		button:before{
+			color: $ash;
+		}	
+	    div img{
+	    	width: 250px;
+	    }
+	}
+
+	.new-package{
+		border-radius: 0;
+		border: 0;
+		padding: 0;
+		margin: 10px;
+
+		.nc-img{
+			height: 100%;
+		}
+
+		.caption{
+			padding: 0;
+
+			.aj-btn-orange{
+				margin-top: -70px;
+				position: relative;
+			}
+		}
+	}
+}
+
+// ===============
+// wide statistics
+// ===============
+.wide-stat{
+	background: url('../res/back-stat.jpg');
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+
+	.block-shadow{
+		background-color: rgba(0,0,0,0.7);
+
+		.container{
+			
+			height: 300px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.row{
+				p{
+					margin-top: -10px;
+				}
+			}
+		}
+	}
+}
+
+// wide statistics mobile view
+@media screen and (max-width: 768px){
+	.wide-stat{
+		height: auto;
+
+		.block-shadow {
+			.container{
+				height: auto;
+
+				.row{
+					margin-top: 30px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+// ============
+// new category
+// ============
+// edtt pc view
+.edtt-pc{
+
+	.aj-text{
+		margin-bottom: -10px;
+	}
+		
+	.main-row{
+		.minor-row-one{
+			margin-left: 0px;
+			background-color: $white;
+
+			.mro-img{
+				padding-right: 0px;
+				height: 285px;
+				padding-left: 0px;
+			}
+
+			.mro-content{
+				padding-top: 15px;
+				padding-left: 15px;
+
+				button{
+					margin-top: 60px;
+				}
+			}
+		}
+		.minor-row-two{
+			margin-left: 0;
+			background-color: $white;
+
+			.mrt-img{
+				padding-right: 0px;
+				height: 285px;
+				padding-left: 0px;
+			}
+
+			.mrt-content{
+				padding-top: 15px;
+				padding-left: 15px;
+
+				button{
+					margin-top: 60px;
+				}
+			}
+		}
+	}
+}
+
+// edtt mobile view
+.edtt-mobile{
+	.aj-text{
+		margin-bottom: -10px;
+	}
+		
+	.main-row{
+		.minor-row{
+			margin-top: 15px;
+			background-color: $white;
+
+			.mr-img{
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+
+			.mr-content{
+				padding-top: 15px;
+				padding-left: 15px;
+
+				button{
+					margin-top: 10px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+// ===============
+// travel thailand
+// ===============
+.travel-slide{
+	.aj-text{
+		margin-bottom: -10px;
+	}
+
+	button:before{
+		color: $ash;
+	}	
+
+	.thumbnail{
+		padding: 0px;
+		border: 1px solid rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+		.tt-map{
+			padding: 30px;
+		}
+		.tt-content{
+			height: 500px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.tt-image{
+			padding-left: 30px;	
+		}
+	}
+}
+
+// ===============
+// we are verified
+// ===============
+.verified-group{
+	.vg-left, .vg-right{
+		img{
+			height: 40px;
+			float: left;
+		}
+	}
+}
+
+// ======
+// footer
+// ======
+.footer{
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	.row{
+		div{
+
+			a{
+				text-decoration: none;
+				color: $white;
+			}
+
+			a:hover{
+				font-weight: bold;
+			}
+
+			p:not(:first-of-type){
+				margin-top: -10px;
+			}
+		}
+	}
+
+	.subscribe-section{
+		.subscribe-field{
+			border-radius: 0;
+			border: 0;
+		}
+
+		.input-group-btn button{
+			border-radius: 0;
+			border: 1px solid $white;
+			background-color: $aj-blue;
+			color: $white;
+			padding: 6px 12px;	
+		}
+
+		.input-group-btn button:hover{
+			background-color: $dark-blue;
+		}
+	}
+}
+
+// =============
+// scroll to top
+// =============
+.scrollToTop{
+	width:60px; 
+	height:60px;
+	position:fixed;
+	bottom: 30px;
+	right:40px;
+	z-index: 999999;
+	display: none;
+	box-shadow: 0px 0px 10px rgba(149, 165, 166,0.7);
+}
+
+@media screen and (max-width: 768px){
+	.scrollToTop{
+		width: 40px;
+		height: 40px;
+		right: 20px;
+	}
+}
+
