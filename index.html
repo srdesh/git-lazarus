@@ -401,7 +401,7 @@
 				<span id="minutes" class="countdown-value"></span>
 				<span id="seconds" class="countdown-value"></span>
 				</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 ct-offer-pc">
 				<a href="#" class="countdown-text ct-offer object-right"><b>All offers</b></a>
 			</div>
 		</div>
@@ -451,6 +451,12 @@
 		<!-- package two ends -->
 	</div>
 	<!-- limited time offer package ends -->
+
+	<!-- all offer button for mobile -->
+	<div class="col-lg-12 col-sm-12 ct-offer-mobile small-space">
+		<a href="#" class="countdown-text ct-offer text-center"><b>All offers</b></a>
+	</div>
+	<!-- all offer button for mobile ends -->
 </div>
 <!-- =============================
 =======LIMITED TIME OFFER END=====
@@ -470,7 +476,7 @@
 <!-- ==========================
 =======POPULAR DESTINATION=====
 =============================== -->
-<div class="container popular-destination medium-space wow fadeInUp">
+<div class="container popular-destination top-medium-space wow fadeInUp">
 	<p class="aj-text orange">Find out most</p>
 	<h2 class="aj-subtitle bold">Popular Destination</h2>
 
@@ -560,7 +566,7 @@
 
 	</div>
 </div>
-<button class="btn btn-default aj-btn-orange object-center medium-space  wow fadeInUp">More</button>
+<button class="btn btn-default aj-btn-orange object-center small-space more-btn wow fadeInUp">More</button>
 <!-- ==============================
 =======POPULAR DESTINATION END=====
 =================================== -->
@@ -657,7 +663,7 @@
 <!-- ========================
 =======BEST SELLING TOUR=====
 ============================= -->
-<div class="container best-selling-tour medium-space wow fadeInUp">
+<div class="container best-selling-tour top-medium-space wow fadeInUp">
 	<p class="aj-text orange">Find out most</p>
 	<h2 class="aj-subtitle bold">Best Selling Tours</h2>
 
@@ -726,7 +732,7 @@
 	</div>
 	<!-- best selling tour packages end -->
 </div>
-<button class="btn btn-default aj-btn-orange object-center bottom-medium-space  wow fadeInUp">More</button>
+<button class="btn btn-default aj-btn-orange object-center bottom-medium-space more-btn wow fadeInUp">More</button>
 <!-- =============================
 =======BEST SELLING TOUR ENDS=====
 ================================== -->
@@ -1062,7 +1068,7 @@
 
 	<div class="row">
 		<!-- we are verified -->
-		<div class="col-lg-8 col-sm-8 vg-left">
+		<div class="col-lg-8 vg-left">
 			<h2 class="aj-subtitle bold">We Are Verified</h2>
 			<img class="img-responsive" src="res/icon-a.png">
 			<img class="img-responsive" src="res/icon-b.png">
@@ -1071,7 +1077,7 @@
 		<!-- we are verified ends -->
 
 		<!-- we accept -->
-		<div class="col-lg-4 col-sm-4 vg-right">
+		<div class="col-lg-4 vg-right">
 			<h2 class="aj-subtitle bold">We Accept</h2>
 			<img class="img-responsive" src="res/icon-d.png">
 			<img class="img-responsive" src="res/icon-e.png">
@@ -1186,10 +1192,14 @@
 
 <script type="text/javascript">
 // refresh on screen size changing [from: jQuery]
-$(window).resize(function(){
-   window.location.href=window.location.href;
+$(window).bind('resize', function(e)
+{
+  if (window.RT) clearTimeout(window.RT);
+  window.RT = setTimeout(function()
+  {
+    this.location.reload(false);
+  });
 });
-
 
 // menu javascript [from: jQuery]
 $(function(){
@@ -1281,13 +1291,15 @@ $(document).on('ready', function() {
        	dots: false,
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+  		autoplaySpeed: 2000,
         responsive: [
 		    {
 		      breakpoint: 1024,
 		      settings: {
 		        slidesToShow: 3,
-		        slidesToScroll: 3,
+		        slidesToScroll: 1,
 		        infinite: true,
 		      }
 		    },
@@ -1295,7 +1307,7 @@ $(document).on('ready', function() {
 		      breakpoint: 600,
 		      settings: {
 		        slidesToShow: 2,
-		        slidesToScroll: 2
+		        slidesToScroll: 1
 		      }
 		    },
 		    {
@@ -1303,6 +1315,10 @@ $(document).on('ready', function() {
 		      settings: {
 		        slidesToShow: 1,
 		        slidesToScroll: 1,
+		        swipeToSlide: true,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        autoplay: false,
 		        arrows: false
 		      }
 		    }
@@ -1403,11 +1419,18 @@ if ($(window).width() < 768){
 	$("#mobile-navbar").css("display", "block");
 	$(".video-section").css("display", "none");
 	$("#pc-navbar").css("display", "none");
+	$(".ct-offer-pc").css("display", "none");
+	$(".ct-offer-mobile").css("display", "block");
+	$(".edtt-mobile").css("display", "none");
+	$(".wide-stat").css("display", "none");
 }
 else{
 	$("#mobile-navbar").css("display", "none");
 	$(".video-section").css("display", "block");
 	$("#pc-navbar").css("display", "block");
+	$(".ct-offer-pc").css("display", "block");
+	$(".ct-offer-mobile").css("display", "none");
+	$(".wide-stat").css("display", "block");
 }
 
 document.onload = closeNav();
@@ -1426,7 +1449,6 @@ function closeNav() {
 	$("#sideNavigation").css("width", "0px");
 	$("#main-body").css("width", "100%");
 	$("#main-body").css("marginLeft", "0px");
-	$(".hero-image").css("margin-top", "60px");
 	$(".topnav a:nth-child(3)").css("display", "block");
 	$(".topnav a:last-child").css("display", "block");
 	$("#mobile-navbar").addClass("navbar-fixed-top");
