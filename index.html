@@ -84,7 +84,7 @@
 <!-- ===MAIN-BODY=== -->
 <div id="main-body">
 <!-- ===@@@@@@@@@=== -->
-
+<div class="mobile-shadow block-shadow"></div>
 <!-- ===========
 =======MENU=====
 ================ -->
@@ -386,43 +386,62 @@
 =======LIMITED TIME OFFER=====
 ============================== -->
 <div class="container medium-space wow fadeInUp">
-	<h1 class="aj-title">Limited Time Offer</h1>
-	
-	<!-- countdown -->
-	<div class="well countdown">
+	<!-- countdown section -->
+	<div class="countdown">
 		<div class="row">
-			<div class="col-lg-3">
-				<p class="countdown-text">Now offer is open!</p>
+			<div class="col-lg-4">
+				<h1 class="aj-subtitle bold">Limited Time Offer</h1>
+				<p class="aj-text orange">Offer ends in!</p>
 			</div>
-			<div class="col-lg-6">
-				<span>Will end in</span>
-				<span id="days" class="countdown-value"></span>
-				<span id="hours" class="countdown-value"></span>
-				<span id="minutes" class="countdown-value"></span>
-				<span id="seconds" class="countdown-value"></span>
+			
+			<!-- countdown -->
+			<div class="col-lg-5">
+				<div>
+					<span id="days" class="countdown-value"></span>
+					<p class="aj-small-text">days</p>
 				</div>
+				<div>
+					<span id="hours" class="countdown-value"></span>
+					<p class="aj-small-text">hours</p>
+				</div>
+				<div>
+					<span id="minutes" class="countdown-value"></span>
+					<p class="aj-small-text">minutes</p>
+				</div>
+				<div>
+					<span id="seconds" class="countdown-value"></span>
+					<p class="aj-small-text">seconds</p>
+				</div>
+			</div>
+			<!-- countdown ends -->
+
+			<!-- offer for pc view -->
 			<div class="col-lg-3 ct-offer-pc">
 				<a href="#" class="countdown-text ct-offer object-right"><b>All offers</b></a>
 			</div>
+			<!-- offer for pc view ends -->
+		
 		</div>
 	</div>
-	<!-- countdown ends -->
+	<!-- countdown section ends -->
+
 
 	<!-- limited time offer package -->
-	<div class="row">
+	<div class="row lto">
 		<!-- package one -->
 		<div class="col-lg-6 top-small-space wow fadeInUp">
 			<a href="#">
 				<div class="lto-box hover-shadow">
 					<div class="row">
-						<div class="col-lg-8 lto-box-right">
-							<img class="img-responsive lto-img" src="res/random.jpg">
+						<div class="col-lg-7 lto-box-left">
+							<img class="img-responsive lto-img" src="res/lto-a.jpg">
 						</div>
-						<div class="col-lg-4 lto-box-left">
-							<h2 class="aj-subtitle orange">Phuket</h2>
-							<p class="aj-text strike">$105</p>
-							<h2 class="aj-subtitle bold">$100</h2>
-							<div class="rateYo"></div>
+						<div class="col-lg-5 lto-box-right">
+							<h2 class="aj-subtitle blue">Phuket</h2>
+							<p class="aj-text"><b>Location:</b> Bangkok, Thailand</p>
+							<span class="aj-text strike">USD 105</span> 
+							<span class="aj-text bold">USD 100</span>
+							<div class="rateYo rateYo-4"></div>
 						</div>
 					</div>
 				</div>
@@ -435,14 +454,16 @@
 			<a href="#">
 				<div class="lto-box hover-shadow">
 					<div class="row">
-						<div class="col-lg-8 lto-box-right">
-							<img class="img-responsive lto-img" src="res/random.jpg">
+						<div class="col-lg-7 lto-box-left">
+							<img class="img-responsive lto-img" src="res/lto-b.jpg">
+							<div class="discount lto-discount">SAVE USD 6</div>
 						</div>
-						<div class="col-lg-4 lto-box-left">
-							<h2 class="aj-subtitle orange">Bangkok</h2>
-							<p class="aj-text strike">$105</p>
-							<h2 class="aj-subtitle bold">$100</h2>
-							<div class="rateYo"></div>
+						<div class="col-lg-5 lto-box-right">
+							<h2 class="aj-subtitle blue">Phuket</h2>
+							<p class="aj-text"><b>Location:</b> Bangkok, Thailand</p>
+							<span class="aj-text strike">USD 105</span> 
+							<span class="aj-text bold">USD 100</span>
+							<div class="rateYo rateYo-5"></div>
 						</div>
 					</div>
 				</div>
@@ -488,9 +509,9 @@
 					<!-- black shade -->
 					<div class="block-shadow"></div>
 					<div class="content">
-						<h2 class="aj-subtitle white bold">Phuket</h2>
-						<p class="aj-text white">Simply dummy text of the printing and type setting industry.</p>
-						<h2 class="aj-text white bold text-center price-tag">$105</h2>
+						<h2 class="aj-subtitle white bold">Bangkok</h2>
+						<p class="aj-text white">Bangkok, Thailand’s capital, is a large city known for ornate shrines and vibrant street life. The boat-filled Chao Phraya River feeds its network of canals, flowing past the Rattanakosin royal district, home to opulent Grand Palace and its sacred Wat Phra Kaew Temple. Nearby is Wat Pho Temple with an enormous reclining Buddha and, on the opposite shore, Wat Arun Temple with its steep steps and Khmer-style spire.</p>
+						<a href="#" class="aj-btn-orange">EXPLORE MORE</a>
 					</div>
 				</div>
 			</a>
@@ -506,8 +527,8 @@
 							<div class="block-shadow"></div>
 							<div class="content">
 								<h2 class="aj-subtitle white bold">Phuket</h2>
-								<p class="aj-text white">Simply dummy text of the printing and type setting industry.</p>
-								<h2 class="aj-text white bold text-center price-tag">$105</h2>
+								<p class="aj-text white">Phuket, a rainforested, mountainous island in the Andaman Sea, has some of Thailand’s most popular beaches, mostly situated along the clear waters of the western shore.</p>
+								<a href="#" class="aj-btn-orange">EXPLORE MORE</a>
 							</div>
 						</div>
 					</a>
@@ -521,9 +542,9 @@
 							<!-- black shade -->
 							<div class="block-shadow"></div>
 							<div class="content">
-								<h2 class="aj-subtitle white bold">Phuket</h2>
-								<p class="aj-text white">Simply dummy text of the printing and type setting industry.</p>
-								<h2 class="aj-text white bold text-center price-tag">$105</h2>
+								<h2 class="aj-subtitle white bold">Pattaya</h2>
+								<p class="aj-text white">Pattaya is a city on Thailand’s eastern Gulf coast known for its beaches. A quiet fishing village as recently as the 1960s, it’s now lined with resort hotels, high-rise condos, shopping malls, cabaret bars and 24-hour clubs.</p>
+								<a href="#" class="aj-btn-orange">EXPLORE MORE</a>
 							</div>
 						</div>
 					</a>
@@ -540,9 +561,9 @@
 					<!-- black shade -->
 					<div class="block-shadow"></div>
 					<div class="content">
-						<h2 class="aj-subtitle white bold">Phuket</h2>
-						<p class="aj-text white">Simply dummy text of the printing and type setting industry.</p>
-						<h2 class="aj-text white bold text-center price-tag">$105</h2>
+						<h2 class="aj-subtitle white bold">Chiang Mai</h2>
+						<p class="aj-text white">Chiang Mai is a city in mountainous northern Thailand. Founded in 1296, it was capital of the independent Lanna Kingdom until 1558. Its Old City area still retains vestiges of walls and moats from its history as a cultural and religious center.</p>
+						<a href="#" class="aj-btn-orange">EXPLORE MORE</a>
 					</div>
 				</div>
 			</a>
@@ -554,9 +575,9 @@
 					<!-- black shade -->
 					<div class="block-shadow"></div>
 					<div class="content">
-						<h2 class="aj-subtitle white bold">Phuket</h2>
-						<p class="aj-text white">Simply dummy text of the printing and type setting industry.</p>
-						<h2 class="aj-text white bold text-center price-tag">$105</h2>
+						<h2 class="aj-subtitle white bold">Ko Samui</h2>
+						<p class="aj-text white">Ko Samui, Thailand’s second largest island, lies in the Gulf of Thailand off the east coast of the Kra Isthmus. It's known for its palm-fringed beaches, coconut groves and dense, mountainous rainforest, plus luxury resorts and posh spas.</p>
+						<a href="#" class="aj-btn-orange">EXPLORE MORE</a>
 					</div>
 				</div>
 			</a>
@@ -566,77 +587,78 @@
 
 	</div>
 </div>
-<button class="btn btn-default aj-btn-orange object-center small-space more-btn wow fadeInUp">More</button>
+<!-- <button class="btn btn-default aj-btn-orange object-center small-space more-btn wow fadeInUp">More</button> -->
 <!-- ==============================
 =======POPULAR DESTINATION END=====
 =================================== -->
 
-<!-- ===========================
-=======FEATURED DESTINATION=====
-================================ -->
+<!-- ====================
+=======FEATURED TOUR=====
+========================= -->
 <div class="container featured-destination medium-space wow fadeInUp">
 	<p class="aj-text orange">Find out most</p>
-	<h2 class="aj-subtitle bold">Featured Destination</h2>
+	<h2 class="aj-subtitle bold">Featured Tours</h2>
 
 	<!-- featured packages -->
 	<section class="regular slider object-center">
 		<!-- package one -->
 		<div class="thumbnail featured-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/featured-a.jpg">
+		      	<img class="fp-img" src="res/1.jpg">
 				<div class="caption">
-					<p class="aj-text bold blue">Phuket</p>
-					<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
+					<p class="aj-text bold blue">Daylong Sea Sight Tour</p>
+					<p class="aj-text"><b>Location:</b> Phuket, Thailand</p>
 					<p class="aj-text bold orange">$105</p>
-					<div class="fp-rate"></div>
+					<div class="fp-rate fp-rate-5"></div>
 				</div>
 			</a>
 		</div>
 	   	<!-- package two -->
 	   	<div class="thumbnail featured-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/featured-b.jpg">
+		      	<img class="fp-img" src="res/2.jpg">
 				<div class="caption">
-					<p class="aj-text bold blue">Phuket</p>
-					<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-					<p class="aj-text bold orange">$105</p>
-					<div class="fp-rate"></div>
+					<p class="aj-text bold blue">Temple of Glory</p>
+					<p class="aj-text"><b>Location:</b> Chiang Mai, Thailand</p>
+					<p class="aj-text bold orange">$96</p>
+					<div class="fp-rate fp-rate-4"></div>
 				</div>
 			</a>
 		</div>
 		<!-- package three -->
 		<div class="thumbnail featured-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/featured-c.jpg">
+		      	<img class="fp-img" src="res/3.jpg">
+		      	<div class="discount">SAVE USD 6</div>
 				<div class="caption">
-					<p class="aj-text bold blue">Phuket</p>
-					<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-					<p class="aj-text bold orange">$105</p>
-					<div class="fp-rate"></div>
+					<p class="aj-text bold blue">Daylong at Floating Market</p>
+					<p class="aj-text"><b>Location:</b> Bangkok, Thailand</p>
+					<p class="aj-text bold orange">$75</p>
+					<div class="fp-rate fp-rate-4-half"></div>
 				</div>
 			</a>
 		</div>
 		<!-- package four -->
 		<div class="thumbnail featured-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/featured-d.jpg">
+		      	<img class="fp-img" src="res/4.jpg">
 				<div class="caption">
-					<p class="aj-text bold blue">Phuket</p>
-					<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
+					<p class="aj-text bold blue">Ancient Temple Visit</p>
+					<p class="aj-text"><b>Location:</b> Pattaya, Thailand</p>
 					<p class="aj-text bold orange">$105</p>
-					<div class="fp-rate"></div>
+					<div class="fp-rate fp-rate-5"></div>
 				</div>
 			</a>
 		</div>
 		<!-- package five -->
 		<div class="thumbnail featured-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/featured-a.jpg">
+		      	<img class="fp-img" src="res/5.jpg">
 				<div class="caption">
-					<p class="aj-text bold blue">Phuket</p>
-					<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-					<p class="aj-text bold orange">$105</p>
-					<div class="fp-rate"></div>
+					<p class="aj-text bold blue">James Bond Island</p>
+					<p class="aj-text"><b>Location:</b> Phuket, Thailand</p>
+					<p class="aj-text bold orange">$143</p>
+					<div class="fp-rate fp-rate-4"></div>
 				</div>
 			</a>
 		</div>
@@ -644,7 +666,7 @@
   <!-- featured packages end -->
 </div>
 <!-- ================================
-=======FEATURED DESTINATION ENDS=====
+=======FEATURED TOUR ENDS=====
 ===================================== -->
 
 <!-- ====================
@@ -673,12 +695,13 @@
 		<div class="col-lg-3 no-padding">
 			<div class="thumbnail bst-package hover-shadow wow fadeInUp">
 				<a href="#">
-			      	<img class="fp-img" src="res/featured-a.jpg">
+			      	<img class="fp-img" src="res/6.jpg">
+			      	<div class="discount">SAVE USD 10</div>
 					<div class="caption">
-						<p class="aj-text bold blue">Phuket</p>
-						<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-						<p class="aj-text bold orange">$105</p>
-						<div class="fp-rate"></div>
+						<p class="aj-text bold blue">Big Temple Visit</p>
+						<p class="aj-text"><b>Location:</b> Phuket, Thailand</p>
+						<p class="aj-text bold orange">$115</p>
+						<div class="fp-rate fp-rate-5"></div>
 					</div>
 				</a>
 			</div>
@@ -688,12 +711,12 @@
 		<div class="col-lg-3 no-padding">
 			<div class="thumbnail bst-package hover-shadow wow fadeInUp">
 				<a href="#">
-			      	<img class="fp-img" src="res/featured-b.jpg">
+			      	<img class="fp-img" src="res/7.jpg">
 					<div class="caption">
-						<p class="aj-text bold blue">Phuket</p>
-						<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-						<p class="aj-text bold orange">$105</p>
-						<div class="fp-rate"></div>
+						<p class="aj-text bold blue">Phi Phi Island</p>
+						<p class="aj-text"><b>Location:</b> Phuket, Thailand</p>
+						<p class="aj-text bold orange">$85</p>
+						<div class="fp-rate fp-rate-4"></div>
 					</div>
 				</a>
 			</div>
@@ -703,12 +726,13 @@
 		<div class="col-lg-3 no-padding">
 			<div class="thumbnail bst-package hover-shadow wow fadeInUp">
 				<a href="#">
-			      	<img class="fp-img" src="res/featured-c.jpg">
+			      	<img class="fp-img" src="res/8.jpg">
+			      	<div class="discount">SAVE USD 5.50</div>
 					<div class="caption">
-						<p class="aj-text bold blue">Phuket</p>
-						<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-						<p class="aj-text bold orange">$105</p>
-						<div class="fp-rate"></div>
+						<p class="aj-text bold blue">Daylong Island Party (Couple)</p>
+						<p class="aj-text"><b>Location:</b> Pattaya, Thailand</p>
+						<p class="aj-text bold orange">$166</p>
+						<div class="fp-rate fp-rate-4-half"></div>
 					</div>
 				</a>
 			</div>
@@ -718,12 +742,12 @@
 		<div class="col-lg-3 no-padding">
 			<div class="thumbnail bst-package hover-shadow wow fadeInUp">
 				<a href="#">
-			      	<img class="fp-img" src="res/featured-d.jpg">
+			      	<img class="fp-img" src="res/9.jpg">
 					<div class="caption">
-						<p class="aj-text bold blue">Phuket</p>
-						<p class="aj-text">Simply dummy text of the printing and type setting industry.</p>
-						<p class="aj-text bold orange">$105</p>
-						<div class="fp-rate"></div>
+						<p class="aj-text bold blue">Touch The Nature</p>
+						<p class="aj-text"><b>Location:</b> Kanchanburi, Thailand</p>
+						<p class="aj-text bold orange">$32</p>
+						<div class="fp-rate fp-rate-5"></div>
 					</div>
 				</a>
 			</div>
@@ -731,8 +755,11 @@
 
 	</div>
 	<!-- best selling tour packages end -->
+
+	<!-- more button -->
+	<a href="#" class="btn btn-default object-center aj-btn-orange more-btn wow fadeInUp">More</a>
+	<!-- more button ends -->
 </div>
-<button class="btn btn-default aj-btn-orange object-center bottom-medium-space more-btn wow fadeInUp">More</button>
 <!-- =============================
 =======BEST SELLING TOUR ENDS=====
 ================================== -->
@@ -749,48 +776,50 @@
 		<!-- package one -->
 		<div class="thumbnail new-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/nc-img-a.jpg">
+		      	<img class="fp-img" src="res/category-d.jpg">
 				<div class="caption">
-					<button class="btn btn-default aj-btn-orange object-center">More</button>
+					<a href="#" class="btn btn-default aj-btn-orange object-center">SPA</a>
 				</div>
 			</a>
 		</div>
 	   	<!-- package two -->
 	   	<div class="thumbnail new-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/nc-img-a.jpg">
+		      	<img class="fp-img" src="res/category-e.jpg">
 				<div class="caption">
-					<button class="btn btn-default aj-btn-orange object-center">More</button>
+					<a href="#" class="btn btn-default aj-btn-orange object-center">INDOOR ACTIVITY</a>
 				</div>
 			</a>
 		</div>
 		<!-- package three -->
 		<div class="thumbnail new-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/nc-img-a.jpg">
+		      	<img class="fp-img" src="res/category-c.jpg">
 				<div class="caption">
-					<button class="btn btn-default aj-btn-orange object-center">More</button>
+					<a href="#" class="btn btn-default aj-btn-orange object-center">NIGHT LIFE</a>
 				</div>
 			</a>
 		</div>
 		<!-- package four -->
 		<div class="thumbnail new-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/nc-img-a.jpg">
+		      	<img class="fp-img" src="res/category-b.jpg">
 				<div class="caption">
-					<button class="btn btn-default aj-btn-orange object-center">More</button>
+					<a href="#" class="btn btn-default aj-btn-orange object-center">OUTDOOR ACTIVITY</a>
 				</div>
 			</a>
 		</div>
+
 		<!-- package five -->
 		<div class="thumbnail new-package hover-shadow">
 			<a href="#">
-		      	<img class="fp-img" src="res/nc-img-a.jpg">
+		      	<img class="fp-img" src="res/category-a.jpg">
 				<div class="caption">
-					<button class="btn btn-default aj-btn-orange object-center">More</button>
+					<a href="#" class="btn btn-default aj-btn-orange object-center">SPECIAL ACTIVITY</a>
 				</div>
 			</a>
 		</div>
+
   </section>
   <!-- featured packages end -->
 </div>
@@ -865,10 +894,10 @@
 				<!-- category-a -->
 				<div class="row minor-row-one">
 					<div class="col-lg-6 mro-img">
-						<img class="img-responsive" src="res/square.jpg">
+						<img class="img-responsive" src="res/blog-a.png">
 					</div>
 					<div class="col-lg-6 mro-content">
-						<h4 class="blue bold">Phuket</h4>
+						<h4 class="blue bold">Memorable tour to James Bond Island</h4>
 						<p>Simply dummy text of the printing and type setting industry.</p>
 						<br>
 						<button class="btn btn-default aj-btn-orange">More</button>
@@ -879,13 +908,13 @@
 				<!-- category-b -->
 				<div class="row minor-row-two">
 					<div class="col-lg-6 mrt-content">
-						<h4 class="blue bold">Phuket</h4>
+						<h4 class="blue bold">Cooking Class at Bangkok</h4>
 						<p>Simply dummy text of the printing and type setting industry.</p>
 						<br>
 						<button class="btn btn-default aj-btn-orange">More</button>
 					</div>
 					<div class="col-lg-6 mrt-img">
-						<img class="img-responsive" src="res/square.jpg">
+						<img class="img-responsive" src="res/blog-b.png">
 					</div>
 				</div>
 				<!-- category-b ends -->
@@ -897,10 +926,10 @@
 				<!-- category-a -->
 				<div class="row minor-row-one">
 					<div class="col-lg-6 mro-img">
-						<img class="img-responsive" src="res/square.jpg">
+						<img class="img-responsive" src="res/blog-c.png">
 					</div>
 					<div class="col-lg-6 mro-content">
-						<h4 class="blue bold">Phuket</h4>
+						<h4 class="blue bold">Guide to Phuket</h4>
 						<p>Simply dummy text of the printing and type setting industry.</p>
 						<br>
 						<button class="btn btn-default aj-btn-orange">More</button>
@@ -911,13 +940,13 @@
 				<!-- category-b -->
 				<div class="row minor-row-two">
 					<div class="col-lg-6 mrt-content">
-						<h4 class="blue bold">Phuket</h4>
+						<h4 class="blue bold">Night life at Bangkok</h4>
 						<p>Simply dummy text of the printing and type setting industry.</p>
 						<br>
 						<button class="btn btn-default aj-btn-orange">More</button>
 					</div>
 					<div class="col-lg-6 mrt-img">
-						<img class="img-responsive" src="res/square.jpg">
+						<img class="img-responsive" src="res/blog-d.png">
 					</div>
 				</div>
 				<!-- category-b ends -->
@@ -1064,23 +1093,20 @@
 <!-- ======================
 =======WE ARE VERIFIED=====
 =========================== -->
-<div class="container medium-space verified-group wow fadeInUp">
+<div class="container bottom-medium-space verified-group wow fadeInUp">
 
 	<div class="row">
 		<!-- we are verified -->
-		<div class="col-lg-8 vg-left">
+		<div class="col-lg-8 col-sm-6">
 			<h2 class="aj-subtitle bold">We Are Verified</h2>
-			<img class="img-responsive" src="res/icon-a.png">
-			<img class="img-responsive" src="res/icon-b.png">
-			<img class="img-responsive" src="res/icon-c.png">
+			<img class="img-responsive" src="res/payment-a.png">
 		</div>
 		<!-- we are verified ends -->
 
 		<!-- we accept -->
-		<div class="col-lg-4 vg-right">
+		<div class="col-lg-4 col-sm-6">
 			<h2 class="aj-subtitle bold">We Accept</h2>
-			<img class="img-responsive" src="res/icon-d.png">
-			<img class="img-responsive" src="res/icon-e.png">
+			<img class="img-responsive" src="res/payment-b.png">
 		</div>
 		<!-- we accept ends -->
 	</div>
@@ -1247,11 +1273,27 @@ else{
 // star rating review [from: ratingYo]
 $(function () {
  
-  $(".rateYo").rateYo({
+  $(".rateYo-5").rateYo({
     rating: 5,
+    ratedFill: "#00bfff",
     starWidth: "15px",
     readOnly: true
   });
+
+  $(".rateYo-4").rateYo({
+    rating: 4,
+    ratedFill: "#00bfff",
+    starWidth: "15px",
+    readOnly: true
+  });
+
+  $(".rateYo-4-half").rateYo({
+    rating: 4.5,
+    ratedFill: "#00bfff",
+    starWidth: "15px",
+    readOnly: true
+  });
+
 });
 
 // countdown timer [from: jQuery]
@@ -1274,10 +1316,10 @@ function makeTimer() {
 	if (minutes < "10") { minutes = "0" + minutes; }
 	if (seconds < "10") { seconds = "0" + seconds; }
 
-	$("#days").html(days + "<span> Days</span>");
-	$("#hours").html(hours + "<span> Hours</span>");
-	$("#minutes").html(minutes + "<span> Minutes</span>");
-	$("#seconds").html(seconds + "<span> Seconds</span>");		
+	$("#days").html(days);
+	$("#hours").html(hours);
+	$("#minutes").html(minutes);
+	$("#seconds").html(seconds);		
 
 }
 
@@ -1329,12 +1371,27 @@ $(document).on('ready', function() {
 
 $(function () {
  
-  $(".fp-rate").rateYo({
+  $(".fp-rate-5").rateYo({
     rating: 5,
     ratedFill: "#00bfff",
     starWidth: "15px",
     readOnly: true
   });
+
+  $(".fp-rate-4").rateYo({
+    rating: 4,
+    ratedFill: "#00bfff",
+    starWidth: "15px",
+    readOnly: true
+  });
+
+  $(".fp-rate-4-half").rateYo({
+    rating: 4.5,
+    ratedFill: "#00bfff",
+    starWidth: "15px",
+    readOnly: true
+  });
+
 });
 
 // wide statistics [from: waypointsJs & jQuery counter]
@@ -1438,11 +1495,13 @@ document.onload = closeNav();
 
 function openNav() {
 	$("#sideNavigation").css("width", "280px");
-	$("#main-body").css("width", "90%");
+	$("#main-body").css("width", "100%");
 	$("#main-body").css("marginLeft", "280px");
 	$(".hero-image").css("margin-top", "-20px");
 	$(".topnav a:nth-child(3)").css("display", "none");
 	$(".topnav a:last-child").css("display", "none");
+	$(".mobile-shadow").css("display", "block");
+	$("#main-body").css("position", "fixed");
 	$("#mobile-navbar").removeClass("navbar-fixed-top");
 }
 
@@ -1450,6 +1509,8 @@ function closeNav() {
 	$("#sideNavigation").css("width", "0px");
 	$("#main-body").css("width", "100%");
 	$("#main-body").css("marginLeft", "0px");
+	$(".mobile-shadow").css("display", "none");
+	$("#main-body").css("position", "relative");
 	$(".topnav a:nth-child(3)").css("display", "block");
 	$(".topnav a:last-child").css("display", "block");
 	$("#mobile-navbar").addClass("navbar-fixed-top");

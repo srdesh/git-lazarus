@@ -36,6 +36,12 @@ $osans: 'Open sans', arial;
 	font-size: 14px;
 }
 
+%small-text{
+	font-family: $osans;
+	color: $ash;
+	font-size: 11px;	
+}
+
 %invisible{
 	display: none;
 }
@@ -86,8 +92,7 @@ a{
 }
 
 .aj-small-text{
-	@extend %text;
-	font-size: 10px;
+	@extend %small-text;
 }
 
 .strike{
@@ -285,9 +290,31 @@ a{
 	color: $white;
 }
 
+.discount{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: #ed1c24;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+}
+
+// ===========
+// mobile-view
+// ===========
+
 @media screen and (max-width: 768px){
 	.more-btn{
-		width: 93%
+		padding: 10px;
+		width: 100%;
+	}
+
+	.mobile-shadow{
+		position: absolute;
+		z-index: 99999999;
+		display: none;
 	}
 }
 
@@ -356,6 +383,7 @@ a{
 .topnav a:last-child:hover,
 .topnav a:last-child:active{
 	background-color: $white;
+	padding: 16px 16px;
 	position: absolute;
 	right: 0px;
 }
@@ -726,10 +754,10 @@ a{
 // limited time offer
 // ==================
 .countdown{
-	background-color: $aj-orange;
-	border: 0px;
+	background-color: $white;
+	border: 1px solid #ddd;
 	border-radius: 0;
-	color: $white;
+	padding: 10px;
 
 	.countdown-text{
 		@extend %text;
@@ -737,42 +765,90 @@ a{
 		color: $white;
 	}
 
-	.countdown-value{
-		padding: 0px;
-		font-size: 16px;
-		font-weight: bold;
-		background-color: transparent;
-		color: $white;
+	.col-lg-4{
+
+		p{
+			margin-top: -10px;
+		}
+
+		h1{
+			margin-top: 10px;
+		}
+	}
+
+	.col-lg-5{
+
+		div{
+			width: 60px;
+			float: left;
+			text-align: center;
+			padding: 10px;
+			padding-top: 5px;
+			padding-bottom: 0px;
+			margin: 10px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			border-radius: 5px;
+			background-color: $aj-orange;
+			color: $white;
+
+			p{
+				color: $white;
+			}
+
+			.countdown-value{
+				padding: 0px;
+				font-size: 18px;
+				font-weight: bold;
+				background-color: transparent;
+				color: $white;
+			}
+		}
+	}
+
+	.col-lg-3{
+		a{	
+			padding: 10px;
+			color: $aj-orange;
+		}
 	}
 }
 
-.lto-box{
-	border: 1px solid rgba(0,0,0,0.1);
-	
-	.row{
-		.lto-box-left{
-			padding: 15px;
-			padding-left: 30px;
+.lto{
 
-			.aj-subtitle:first-child{
-				margin-top: 5px;
-				margin-bottom: 10px;
+	.lto-box{
+		border: 1px solid rgba(0,0,0,0.1);
+		
+		.row{
+			.lto-box-left{
+				.lto-img{
+					height: 150px;
+					width: 100%;
+				}
+
+				.lto-discount{
+					right: 35px;
+				}
 			}
 
-			.aj-subtitle:nth-child(3){
-				margin-top: -10px;
-				margin-bottom: 20px;
-			}
+			.lto-box-right{
+				padding: 15px;
+				padding-left: 15px;
 
-			.rateYo .jq-ry-normal-group,
-			.rateYo .jq-ry-rated-group{
-				margin-left: -5px;
-			} 
-		}
+				.aj-subtitle:first-child{
+					margin-top: 5px;
+					margin-bottom: 10px;
+				}
 
-		.lto-box-right{
-			.lto-img{
-				width: 100%;
+				.aj-subtitle:nth-child(3){
+					margin-top: -10px;
+					margin-bottom: 10px;
+				}
+
+				.rateYo .jq-ry-normal-group,
+				.rateYo .jq-ry-rated-group{
+					margin-left: -5px;
+				} 
 			}
 		}
 	}
@@ -786,26 +862,63 @@ a{
 			display: block;
 			width: 100%;
 			padding: 10px;
-			color: $aj-orange;
-			background-color: $white;
-			border: 1px solid #ddd;
+			color: $white;
+			background-color: $aj-orange;
 		}
+	}
 
-		.ct-offer:hover{
-			color: $aj-orange;
-			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	.lto{
+
+		.lto-box{
+			
+			.row{
+				.lto-box-right{
+					padding: 15px;
+					padding-left: 30px;
+				}
+			}
 		}
 	}
 
 	.countdown{
-		.countdown-value{
-			padding: 0px;
-			font-weight: bold;
-			background-color: transparent;
-			color: $white;
+
+		.col-lg-5{
+
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+
+			div{
+				width: 50px;
+				float: left;
+				text-align: center;
+				padding: 5px;
+				padding-top: 5px;
+				padding-bottom: 0px;
+				margin: 5px;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				border-radius: 5px;
+				background-color: $aj-orange;
+				color: $white;
+
+				p{
+					color: $white;
+				}
+
+				.countdown-value{
+					padding: 0px;
+					font-size: 18px;
+					font-weight: bold;
+					background-color: transparent;
+					color: $white;
+				}
+			}
 		}
 	}
 }
+
 
 
 // ===================
@@ -814,6 +927,14 @@ a{
 .popular-destination{
 	.aj-text{
 		margin-bottom: -10px;
+	}
+
+	.aj-btn-orange{
+		text-align: center;
+		display: block;
+		width: 150px;
+		margin-top: 20px;
+		padding: 10px;
 	}
 
 	// inherited block css
@@ -920,6 +1041,7 @@ a{
 		border-radius: 0;
 		padding: 0;
 		margin: 10px;
+		position: relative;
 
 		.fp-img{
 			width: 100%;
@@ -1024,7 +1146,8 @@ a{
 			padding: 0;
 
 			.aj-btn-orange{
-				margin-top: -70px;
+				margin-top: 0px;
+				width: 100%;
 				position: relative;
 			}
 		}
@@ -1104,7 +1227,7 @@ a{
 
 			.mro-img{
 				padding-right: 0px;
-				height: 285px;
+				height: 270px;
 				padding-left: 0px;
 			}
 
@@ -1113,7 +1236,7 @@ a{
 				padding-left: 15px;
 
 				button{
-					margin-top: 60px;
+					margin-top: 0px;
 				}
 			}
 		}
@@ -1123,7 +1246,7 @@ a{
 
 			.mrt-img{
 				padding-right: 0px;
-				height: 285px;
+				height: 270px;
 				padding-left: 0px;
 			}
 
@@ -1132,7 +1255,7 @@ a{
 				padding-left: 15px;
 
 				button{
-					margin-top: 60px;
+					margin-top: 0px;
 				}
 			}
 		}
@@ -1204,11 +1327,8 @@ a{
 // we are verified
 // ===============
 .verified-group{
-	.vg-left, .vg-right{
-		img{
-			height: 40px;
-			float: left;
-		}
+	img{
+		height: 30px;
 	}
 }
 
